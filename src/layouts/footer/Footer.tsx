@@ -1,4 +1,4 @@
-import { useAppDispatch, useAppSelector } from "../store/store";  
+import { useAppDispatch, useAppSelector } from "../../store/store";  
 
 const Footer = () => {
     const dispatch = useAppDispatch();

@@ -1,33 +1,37 @@
 import { useAppDispatch, useAppSelector } from "../store/store"
-import { useNavigate } from "react-router-dom";
 import { changeIdiom, changeMode } from "../store/features/view";
-import Footer from "./Footer";
+import Footer from "../layouts/footer/Footer";
+import Button from "../components/button/Button";
 
 const Prueba = () => {
     const dispatch = useAppDispatch();
     const idiom = useAppSelector(state => state.view.idiom);
     const mode = useAppSelector(state => state.view.mode);
-    const navigate = useNavigate()
 
     return (
-        <div className={`flex flex-col justify-between ${mode? "bg-slate-100": "bg-gray-900"} h-[2500px]`}>
-        <h1 className={`font-extrabold text-5xl text-center ${mode? "text-gray-900": "text-gray-100"}`}>
+        <div className={`flex flex-col justify-between ${mode? "bg-dark": "bg-light"} transition-all duration-200 h-[2500px]`}>
+        <h1 className={`font-extrabold text-5xl text-center ${mode? "text-light": "text-dark"}`}>
           {idiom === "ES"? "Hola Mundo!": "Hello World!"}
         </h1>
         <a
         href="#footer"
-        className={`${mode? "text-gray-900": "text-gray-100"} text-center hover:cursor-pointer`}
+        className={`${mode? "text-light": "text-dark"} text-center hover:cursor-pointer`}
         >
           Footer
         </a>
   
         <div className="flex justify-center items-center gap-5 h-96">
           <div>
-            <h1 className={`${mode? "text-gray-900": "text-gray-100"} font-bold text-3xl hover:cursor-pointer`} onClick={() => dispatch(changeIdiom())}>
+            <h1 className={`${mode? "text-light": "text-dark"} font-bold text-3xl hover:cursor-pointer`} onClick={() => dispatch(changeIdiom())}>
               {idiom}
             </h1>
           </div>
-  
+
+          <Button 
+          textUS="Download my resume"
+          textES="Descarga mi CV"
+          />
+
           <div>
             <h1 className="text-3xl hover:cursor-pointer" onClick={() => dispatch(changeMode())}>
               {mode ? "🌚": "🌞"}
