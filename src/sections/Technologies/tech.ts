@@ -14,6 +14,16 @@ import postgresWhite from "../../assets/postgres-negro.svg";
 import postgresBlack from "../../assets/postgres-blanco.svg";
 import gitWhite from "../../assets/git-negro.svg";
 import gitBlack from "../../assets/git-blanco.svg";
+import htmlWhite from "../../assets/html-negro.svg";
+import htmlBlack from "../../assets/html-blanco.svg";
+import cssWhite from "../../assets/css-negro.svg";
+import cssBlack from "../../assets/css-blanco.svg";
+import tailwindWhite from "../../assets/tailwind-negro.svg";
+import tailwindBlack from "../../assets/tailwind-blanco.svg";
+import githubWhite from "../../assets/github-negro.svg";
+import githubBlack from "../../assets/github-blanco.svg";
+
+
 
 export type Technology = {
     id: number
@@ -23,7 +33,7 @@ export type Technology = {
     url: string
 }
 
-const techs: Technology[] = [
+export const techs1: Technology[] = [
     {
         id: 1,
         name: "JavaScript",
@@ -49,7 +59,11 @@ const techs: Technology[] = [
         imageDark: nodeBlack,
         imageLight: nodeWhite,
         url: "https://nodejs.org/en/docs"
-    },{
+    },
+]
+
+export const techs2: Technology[] = [
+    {
         id: 5,
         name: "TypeScript",
         imageDark: typescriptBlack,
@@ -76,4 +90,30 @@ const techs: Technology[] = [
     },
 ]
 
-export default techs;
+export const techs3: Technology[] = [
+    {
+        id: 9,
+        name: "HTML5",
+        imageDark: htmlBlack,
+        imageLight: htmlWhite,
+        url: "https://developer.mozilla.org/en-US/docs/Web/HTML"
+    },{
+        id: 10,
+        name: "CSS3",
+        imageDark: cssBlack,
+        imageLight: cssWhite,
+        url: "https://developer.mozilla.org/en-US/docs/Web/CSS"
+    },{
+        id: 11,
+        name: "TailwindCSS",
+        imageDark: tailwindBlack,
+        imageLight: tailwindWhite,
+        url: "https://tailwindcss.com/docs/installation"
+    },{
+        id: 12,
+        name: "GitHub",
+        imageDark: githubBlack,
+        imageLight: githubWhite,
+        url: "https://github.com/"
+    },
+]

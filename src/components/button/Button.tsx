@@ -1,11 +1,13 @@
 import { useAppSelector } from "../../store/store"
+import {motion} from 'framer-motion';
 
 type Props = {
     textES: string
     textUS: string
+    onClick: any
 }
 
-const Button = ({textES, textUS}: Props) => {
+const Button = ({onClick, textES, textUS}: Props) => {
     const mode = useAppSelector(state => state.view.mode);
     const idiom = useAppSelector(state => state.view.idiom);
     return (
@@ -13,9 +15,18 @@ const Button = ({textES, textUS}: Props) => {
         //     <p className={`text-lg font-montserrat font-semibold`}>{idiom === "ES"? textES: textUS}</p>
         // </button>
 
-        <button className={` ${mode? "bg-light": "bg-dark"} rounded-md transition-all duration-200 hover:cursor-pointer`}>
+        <motion.button
+        initial={{
+            y: '60px',
+        }} 
+        whileInView={{
+            y: [0, 0, 0, 0, 0],
+            scale: [1, 1, 1, 1.5, 1]
+        }}
+        transition={{duration: 0.5}}
+        onClick={onClick} className={` ${mode? "bg-light": "bg-dark"} rounded-md transition-all duration-200 hover:cursor-pointer`}>
             <p className={`${mode? "bg-dark": "bg-light"} ${mode? "text-light": "text-dark"} rounded-md border-2 ${mode? "border-light": "border-dark"} py-2 px-6 translate-x-[-0.25em] translate-y-[-0.25em] transition-all duration-200 text-base md:text-lg font-montserrat font-semibold hover:bg-brand hover:text-light active:translate-x-[0] active:translate-y-[0]`}>{idiom === "ES"? textES: textUS}</p>
-        </button>
+        </motion.button>
     )
 }
 

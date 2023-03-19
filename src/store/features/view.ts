@@ -1,5 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { view } from "../../types/types";
+import { getItem, setItem } from "../../utils/localStorage";
 
 const initialState:view = {
     idiom: "ES",
