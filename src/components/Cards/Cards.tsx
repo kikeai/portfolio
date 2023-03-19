@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Technology, techs1, techs2, techs3 } from "../../sections/Technologies/tech";
-import Button from "../button/Button";
+import Button from "../button/normalButton/Button";
 import Card from "../card/Card";
 import { motion } from "framer-motion";
 

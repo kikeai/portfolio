@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import Footer from "../../layouts/footer/Footer";
 import About from "../../sections/About/About";
 import Presentation from "../../sections/Presentation/Presentation";
 import Technologies from "../../sections/Technologies/Technologies";
@@ -21,6 +22,7 @@ const Home = () => {
             <Presentation />
             <About />
             <Technologies />
+            <Footer />
         </div>
     )
 }

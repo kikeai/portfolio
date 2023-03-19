@@ -1,7 +1,7 @@
 import { useAppDispatch, useAppSelector } from "../store/store"
 import { changeIdiom, changeMode } from "../store/features/view";
 import Footer from "../layouts/footer/Footer";
-import Button from "../components/button/Button";
+import Button from "../components/button/normalButton/Button";
 
 const Prueba = () => {
     const dispatch = useAppDispatch();

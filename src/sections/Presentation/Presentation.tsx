@@ -2,7 +2,7 @@ import { useAppSelector } from "../../store/store";
 import {title1ES, title1US, title2ES, title2US, presentationES, presentationUS, descriptionES, descriptionUS} from "./texts"
 import hand from "../../assets/hand.png"
 import { transition } from "../../App";
-import Button from "../../components/button/Button";
+import Button from "../../components/button/normalButton/Button";
 import Header from "../../layouts/header/Header";
 import Slider from "../../components/Slider/Slider";
 import { motion } from 'framer-motion';

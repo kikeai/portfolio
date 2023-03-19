@@ -3,7 +3,7 @@ import photoMe from "../../assets/me-bg.png";
 import photoMeDark from "../../assets/me-bg-dark.png";
 import manEmoji from "../../assets/man.png";
 import { transition } from "../../App";
-import Button from "../../components/button/Button";
+import Button from "../../components/button/normalButton/Button";
 import { motion } from 'framer-motion';
 
 const About = () => {
@@ -34,11 +34,11 @@ const About = () => {
 
                 <motion.div 
                 initial={{
-                    x: '100%',
+                    y: '60px',
                     opacity: 0,
                 }}
                 whileInView={{
-                    x: 0,
+                    y: 0,
                     opacity: 1,
                 }}
                 transition={{duration: 0.7}}
