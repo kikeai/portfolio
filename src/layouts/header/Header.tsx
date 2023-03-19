@@ -36,7 +36,7 @@ const Header = () => {
     const textHeader = `${mode? "text-light": "text-gray-600"} ${transition} text-lg font-montserrat`
 
     return (
-        <header className="fixed top-0 backdrop-blur z-40 flex px-12 h-20 justify-center items-center md:px-20 md:h-28 w-full">
+        <header className={`fixed top-0 backdrop-blur z-40 flex px-12 h-20 justify-center items-center border-b ${transition} ${mode? "border-b-dark": "border-b-light"} md:px-20 md:h-28 w-full`}>
             <div className="flex justify-between w-full max-w-[1440px]">
                 <motion.div
                 initial={{
@@ -46,6 +46,7 @@ const Header = () => {
                     x: 0,
                     scale: [1, 1, 1.5, 1]
                 }}
+                className="flex items-center"
                 >
                     <img className={`h-5 md:h-8 ${transition}`} src={`${mode? logoDark: logoLight}`} alt="logo kike" />
                 </motion.div>
@@ -60,6 +61,7 @@ const Header = () => {
                     className="text-lg border-2 border-transparent rounded-md px-2 hover:cursor-pointer hover:bg-gray-600 hover:border-gray-300 hover:text-light" onClick={() => dispatch(changeMode())}>{mode ? "🌚": "🌞"}</motion.p> */}
                     
                     <FormControlLabel
+                        checked={mode}
                         onChange={() => dispatch(changeMode())}
                         control={<MaterialUISwitch sx={{ m: 1 }} />}
                         label=""
@@ -69,7 +71,7 @@ const Header = () => {
                     className={`${textHeader} font-medium hover:underline hover:text-brand`} href="#about">{idiom === "ES"? "Sobre mí": "About me"}</motion.a>
                     <motion.a
                     variants={item}
-                    className={`${textHeader} font-medium hover:underline hover:text-brand`} href="#">{idiom === "ES"? "Proyectos": "Projects"}</motion.a>
+                    className={`${textHeader} font-medium hover:underline hover:text-brand`} href="#techs">{idiom === "ES"? "Proyectos": "Projects"}</motion.a>
                     <motion.a
                     variants={item}
                     className={`${textHeader} font-medium hover:underline hover:text-brand`} href="#">{idiom === "ES"? "Contacto": "Contact"}</motion.a>
