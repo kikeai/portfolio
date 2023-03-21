@@ -5,6 +5,7 @@ import Presentation from "../../sections/Presentation/Presentation";
 import Technologies from "../../sections/Technologies/Technologies";
 import { changeIdiom, changeMode } from "../../store/features/view";
 import { useAppDispatch, useAppSelector } from "../../store/store";
+import LastProjects from "../../sections/lastProjects/LastProjects";
 
 const Home = () => {
     const mode = useAppSelector(state => state.view.mode);
@@ -22,6 +23,7 @@ const Home = () => {
             <Presentation />
             <About />
             <Technologies />
+            <LastProjects />
             <Footer />
         </div>
     )

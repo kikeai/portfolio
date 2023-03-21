@@ -6,6 +6,7 @@ import Button from "../../components/button/normalButton/Button";
 import Header from "../../layouts/header/Header";
 import Slider from "../../components/Slider/Slider";
 import { motion } from 'framer-motion';
+import { useNavigate } from "react-router-dom";
 
 const animatePres = {
     initial: {y: '60px', opacity: 0},
@@ -17,6 +18,7 @@ const animatePres = {
 }
 
 const Presentation = () => {
+    const navigate = useNavigate()
     const idiom = useAppSelector(state => state.view.idiom);
     const mode = useAppSelector(state => state.view.mode);
     return (
@@ -53,7 +55,7 @@ const Presentation = () => {
                 
                 <div className="flex mt-10 gap-5 md:gap-8">
                     <Button onClick={() => {}} textES="Contáctame" textUS="Get in touch" />
-                    <Button onClick={() => {}} textES="Ver proyectos" textUS="View projects" />
+                    <Button onClick={() => {window.location.replace("/#projects")}} textES="Ver proyectos" textUS="View projects" />
                 </div>
             </div>
             <Slider />

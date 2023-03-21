@@ -71,7 +71,7 @@ const Header = () => {
                     className={`${textHeader} font-medium hover:underline hover:text-brand`} href="#about">{idiom === "ES"? "Sobre mí": "About me"}</motion.a>
                     <motion.a
                     variants={item}
-                    className={`${textHeader} font-medium hover:underline hover:text-brand`} href="#techs">{idiom === "ES"? "Proyectos": "Projects"}</motion.a>
+                    className={`${textHeader} font-medium hover:underline hover:text-brand`} href="#projects">{idiom === "ES"? "Proyectos": "Projects"}</motion.a>
                     <motion.a
                     variants={item}
                     className={`${textHeader} font-medium hover:underline hover:text-brand`} href="#">{idiom === "ES"? "Contacto": "Contact"}</motion.a>

@@ -18,7 +18,7 @@ const Footer = () => {
                     <div className={`${idiom === "ES"? "max-w-[700px]": "max-w-[470px]"}`}>
                         <h4 className={`font-montserrat font-black italic text-light text-2xl md:text-5xl`}>{idiom !== "ES" ? `GOT A PROJECT? I AM AVAILABLE LET’S TO TALK.`: "¿TIENES UN PROYECTO? ESTOY DISPONIBLE VAMOS A HABLAR."}</h4>
                     </div>
-                    <div className=" w-full pt-5 md:w-[45%]">
+                    <div className=" w-full md:w-[45%]">
                         <p className="font-montserrat font-medium text-light mb-6">{idiom === "ES"? textES: textUS}</p>
                         <Button textES="Contáctame" textUS="Get in touch" onClick={() => {}} />
                         <p className="font-montserrat font-bold text-lg mt-6 text-light">{idiom === "ES"? "Sigueme": "Follow me"}</p>
