@@ -33,7 +33,7 @@ const Header = () => {
     const dispatch = useAppDispatch();
     const idiom = useAppSelector(state => state.view.idiom);
     const mode = useAppSelector(state => state.view.mode);
-    const textHeader = `${mode? "text-light": "text-gray-600"} ${transition} text-lg font-montserrat`
+    const textHeader = `${mode? "text-light": "text-gray-600"} ${transition} text-lg 2xl:text-2xl font-montserrat`
 
     return (
         <header className={`fixed top-0 backdrop-blur z-40 flex px-12 h-20 justify-center items-center border-b ${transition} ${mode? "border-b-dark": "border-b-light"} md:px-20 md:h-28 w-full`}>

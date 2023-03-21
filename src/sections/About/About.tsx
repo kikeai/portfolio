@@ -26,8 +26,8 @@ const About = () => {
                     }}
                     transition={{duration: 0.7}}
                     className="w-full pb-14">
-                        <h3 className={`flex ${mode? "text-light": "text-dark"} ${transition} mb-5 text-4xl font-montserrat font-black italic`}>{idiom ===  "ES"? "Sobre mí": "About me"}<img className="h-9 ml-3" src={manEmoji} alt="emoji"/></h3>
-                        <p className={`${mode? "text-light": "text-gray-700"}  ${transition} font-montserrat font-medium`}>{idiom === "ES"? aboutMeES: aboutMeUS}</p>
+                        <h3 className={`flex ${mode? "text-light": "text-dark"} ${transition} mb-5 text-4xl 2xl:text-5xl font-montserrat font-black italic`}>{idiom ===  "ES"? "Sobre mí": "About me"}<img className="h-9 ml-3" src={manEmoji} alt="emoji"/></h3>
+                        <p className={`${mode? "text-light": "text-gray-700"}  ${transition} font-montserrat text-base 2xl:text-xl font-medium`}>{idiom === "ES"? aboutMeES: aboutMeUS}</p>
                     </motion.div>
                     <Button onClick={() => {window.open('https://drive.google.com/drive/folders/1aUr9KTQNYygWkg2HFarNJXI7-JdUPChJ?usp=share_link')}} textES="Descargar CV" textUS="Download resume" />
                 </div>
