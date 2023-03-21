@@ -21,7 +21,7 @@ const Project = ({image, title, descriptionES, descriptionUS, url, reverse}: Pro
     const mode = useAppSelector(state => state.view.mode);
     const idiom = useAppSelector(state => state.view.idiom);
     return (
-        <div className={`flex flex-col xl:flex-row ${reverse? "flex-row-reverse": ""} justify-between w-full items-center max-w-[1440px] px-12 xl:px-32`}>
+        <div className={`flex flex-col ${reverse? "xl:flex-row-reverse": "xl:flex-row"} justify-between w-full items-center max-w-[1440px] px-12 xl:px-32`}>
             <div>
                 <ImageButton image={image} onClick={url} />
             </div>
