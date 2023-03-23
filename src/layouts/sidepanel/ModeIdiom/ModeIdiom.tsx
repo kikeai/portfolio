@@ -12,7 +12,7 @@ const ModeIdiom = () => {
     const dispatch = useAppDispatch();
     const textHeader = `${mode? "text-light": "text-gray-600"} ${transition} text-lg 2xl:text-2xl font-montserrat`
     return (
-        <div className={`flex justify-between items-center py-6 px-12 w-full`}>
+        <div className={`flex justify-between items-center py-6 px-6 w-full`}>
             <div>
                 <FormControlLabel
                     checked={mode}

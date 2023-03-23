@@ -27,7 +27,7 @@ const Project = ({image, title, descriptionES, descriptionUS, url, reverse}: Pro
             </div>
 
             <div className="flex flex-col gap-8 mt-8 mb-8 xl:mt-0 xl:mb-0 xl:max-w-[50%]">
-                <h3 className={`${mode? "text-light": "text-dark"} ${transition} font-montserrat font-black italic text-2xl xl:3xl`}>{title}</h3>
+                <h3 className={`${mode? "text-light": "text-dark"} ${transition} font-montserrat font-black italic text-2xl xl:text-3xl`}>{title}</h3>
                 <p className={`${mode? "text-light": "text-gray-700"} ${transition} max-w-[600px] xl:max-w-none font-montserrat font-medium text-lg md:text-xl`}>{idiom === "ES"? descriptionES: descriptionUS}</p>
                 <Labels labels={labels} />
                 <div>

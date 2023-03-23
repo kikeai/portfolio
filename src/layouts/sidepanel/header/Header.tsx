@@ -11,7 +11,7 @@ const Header = () => {
     const dispatch = useAppDispatch()
     const mode = useAppSelector(state => state.view.mode);
     return (
-        <div className={`flex flex-row-reverse justify-between border-b ${mode? "border-b-light": "border-b-dark"} items-center w-full py-6 px-12`}>
+        <div className={`flex flex-row-reverse justify-between border-b ${mode? "border-b-light": "border-b-dark"} items-center w-full py-6 px-6`}>
             <div>
                 <img className={`${transition} h-5`} src={mode? logoWhite: logoBlack} alt="logo" />
             </div>
