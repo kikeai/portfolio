@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { MouseEvent, useEffect } from "react";
 import Footer from "../../layouts/footer/Footer";
 import About from "../../sections/About/About";
 import Presentation from "../../sections/Presentation/Presentation";
@@ -6,6 +6,7 @@ import Technologies from "../../sections/Technologies/Technologies";
 import { changeIdiom, changeMode } from "../../store/features/view";
 import { useAppDispatch, useAppSelector } from "../../store/store";
 import LastProjects from "../../sections/lastProjects/LastProjects";
+import Sidepanel from "../../layouts/sidepanel/Sidepanel";
 
 const Home = () => {
     const mode = useAppSelector(state => state.view.mode);
@@ -20,6 +21,7 @@ const Home = () => {
     }, [])
     return (
         <div className={`${mode? "bg-dark": "bg-light"} transition-all duration-200 h-screen bg`}>
+            <Sidepanel />
             <Presentation />
             <About />
             <Technologies />

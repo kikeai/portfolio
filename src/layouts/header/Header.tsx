@@ -8,6 +8,7 @@ import { transition } from "../../App";
 import { FormControlLabel } from "@mui/material";
 import MaterialUISwitch from "./togle";
 import {motion} from 'framer-motion';
+import { OpenCloseSidePanel } from "../../store/features/popups";
 
 const container = {
     hidden: { opacity: 1, scale: 0 },
@@ -80,7 +81,7 @@ const Header = () => {
                     className={`${textHeader} font-bold border-2 border-transparent rounded-md px-2 hover:cursor-pointer hover:bg-gray-600 hover:border-gray-300 hover:text-light`} onClick={() => dispatch(changeIdiom())}>{idiom}</motion.p>
                 </motion.div>
 
-                <div className="md:hidden">
+                <div onClick={() => dispatch(OpenCloseSidePanel())} className="md:hidden">
                     <img className="hover:cursor-pointer md:hidden" src={mode? menuIconlight: menuIconDark} alt="menu" />
                 </div>
             </div>
