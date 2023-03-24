@@ -6,4 +6,6 @@ export type view = {
 export type popups = {
     sidepanel: boolean
     contact: boolean
+    modal: boolean
+    modalMail: boolean
 }

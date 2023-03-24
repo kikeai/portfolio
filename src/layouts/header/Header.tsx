@@ -8,7 +8,7 @@ import { transition } from "../../App";
 import { FormControlLabel } from "@mui/material";
 import MaterialUISwitch from "./togle";
 import {motion} from 'framer-motion';
-import { OpenCloseSidePanel } from "../../store/features/popups";
+import { OpenCloseModal, OpenCloseSidePanel } from "../../store/features/popups";
 
 const container = {
     hidden: { opacity: 1, scale: 0 },
@@ -73,9 +73,9 @@ const Header = () => {
                     <motion.a
                     variants={item}
                     className={`${textHeader} font-medium hover:underline hover:text-brand`} href="#projects">{idiom === "ES"? "Proyectos": "Projects"}</motion.a>
-                    <motion.a
+                    <motion.p
                     variants={item}
-                    className={`${textHeader} font-medium hover:underline hover:text-brand`} href="#">{idiom === "ES"? "Contacto": "Contact"}</motion.a>
+                    className={`${textHeader} font-medium hover:underline hover:text-brand hover:cursor-pointer`} onClick={() => dispatch(OpenCloseModal())}>{idiom === "ES"? "Contacto": "Contact"}</motion.p>
                     <motion.p
                     variants={item}
                     className={`${textHeader} font-bold border-2 border-transparent rounded-md px-2 hover:cursor-pointer hover:bg-gray-600 hover:border-gray-300 hover:text-light`} onClick={() => dispatch(changeIdiom())}>{idiom}</motion.p>

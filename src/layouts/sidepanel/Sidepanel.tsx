@@ -1,7 +1,7 @@
 import { useAppDispatch, useAppSelector } from "../../store/store";
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { OpenCloseSidePanel } from "../../store/features/popups";
+import { OpenCloseModal, OpenCloseSidePanel } from "../../store/features/popups";
 import Header from "./header/Header";
 import ModeIdiom from "./ModeIdiom/ModeIdiom";
 import aboutBlack from "../../assets/about-me-icon-black.svg";
@@ -11,6 +11,7 @@ import projectWhite from "../../assets/projects-icon-white.svg";
 import contactBlack from "../../assets/contact-icon-black.svg";
 import contactWhite from "../../assets/contact-icon-white.svg";
 import ButtonSection from "./buttonSection/ButtonSection";
+import NestedModal from "../modal/Modal";
 
 
 
@@ -45,7 +46,7 @@ const Sidepanel = () => {
                 icon={mode? contactWhite: contactBlack}
                 text={idiom === "ES"? "Contacto": "Contact"}
                 onClick={() => {
-                    window.location.replace("/#");
+                    dispatch(OpenCloseModal());
                     dispatch(OpenCloseSidePanel());
                 }}
                 />

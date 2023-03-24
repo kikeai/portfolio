@@ -6,7 +6,9 @@ module.exports = {
       colors: {
         light: "#f4f4f4",
         dark: "#0d0d03",
-        brand: "#de263d"
+        brand: "#de263d",
+        whatsapp: "#2cb742",
+        linkedin: "#007ebb"
       },
       fontFamily: {
         'montserrat': ['Montserrat', 'sans-serif'],
