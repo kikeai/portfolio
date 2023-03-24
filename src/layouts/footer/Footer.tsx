@@ -1,5 +1,6 @@
 import Button from "../../components/button/normalButton/Button";
 import SmallButton from "../../components/button/smallButton/SmallButton";
+import { OpenCloseModal } from "../../store/features/popups";
 import { useAppDispatch, useAppSelector } from "../../store/store";  
 import { socials } from "./socials";
 
@@ -20,7 +21,7 @@ const Footer = () => {
                     </div>
                     <div className=" w-full md:w-[45%]">
                         <p className="font-montserrat font-medium text-light mb-6">{idiom === "ES"? textES: textUS}</p>
-                        <Button textES="Contáctame" textUS="Get in touch" onClick={() => {}} />
+                        <Button textES="Contáctame" textUS="Get in touch" onClick={() => {dispatch(OpenCloseModal())}} />
                         <p className="font-montserrat font-bold text-lg mt-6 text-light">{idiom === "ES"? "Sigueme": "Follow me"}</p>
                         <div className="flex gap-4 pt-5">
                             {

@@ -1,4 +1,4 @@
-import { useAppSelector } from "../../store/store";
+import { useAppDispatch, useAppSelector } from "../../store/store";
 import {title1ES, title1US, title2ES, title2US, presentationES, presentationUS, descriptionES, descriptionUS} from "./texts"
 import hand from "../../assets/hand.png"
 import { transition } from "../../App";
@@ -7,6 +7,7 @@ import Header from "../../layouts/header/Header";
 import Slider from "../../components/Slider/Slider";
 import { motion } from 'framer-motion';
 import { useNavigate } from "react-router-dom";
+import { OpenCloseModal } from "../../store/features/popups";
 
 const animatePres = {
     initial: {y: '60px', opacity: 0},
@@ -18,6 +19,7 @@ const animatePres = {
 }
 
 const Presentation = () => {
+    const dispatch = useAppDispatch()
     const navigate = useNavigate()
     const idiom = useAppSelector(state => state.view.idiom);
     const mode = useAppSelector(state => state.view.mode);
@@ -54,7 +56,7 @@ const Presentation = () => {
                 className={`${mode? "text-light": "text-gray-700"} ${transition} text-center font-montserrat font-medium text-sm md:text-lg max-w-[300px] sm:max-w-[450px] md:max-w-[600px] 2xl:max-w-[800px] 2xl:text-2xl mt-4 md:mt-7`}>{idiom === "ES"? descriptionES: descriptionUS}</motion.p>
                 
                 <div className="flex mt-10 gap-5 md:gap-8">
-                    <Button onClick={() => {}} textES="Contáctame" textUS="Get in touch" />
+                    <Button onClick={() => {dispatch(OpenCloseModal())}} textES="Contáctame" textUS="Get in touch" />
                     <Button onClick={() => {window.location.replace("/#projects")}} textES="Ver proyectos" textUS="View projects" />
                 </div>
             </div>
