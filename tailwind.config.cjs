@@ -15,7 +15,8 @@ module.exports = {
       },
       animation: {
         'slider': 'scroll 30s linear infinite',
-        'sliderxl': 'scrollxl 30s linear infinite'
+        'sliderxl': 'scrollxl 30s linear infinite',
+        'spinIcon': 'spin 3s linear infinite'
       },
       keyframes: {
         scroll: {
@@ -25,6 +26,10 @@ module.exports = {
         scrollxl: {
           '0%': {transform: 'translateX(0)'},
           '100%': {transform: 'translateX(-2020px)'}
+        },
+        spin: {
+          '0%': {transform: 'rotate(0deg)'},
+          '100%': {transform: 'rotate(360deg)'}
         }
       }
     },
