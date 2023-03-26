@@ -158,7 +158,7 @@ export default function ChildModal() {
             input={form.user_name}
             name="user_name"
             error={errors.user_name !== ""}
-            placeholder="Tu Nombre"
+            placeholder={idiom === "ES"? "Tu nombre": "Your name"}
             onChange={handleChange}
             />
             <p 
@@ -169,7 +169,7 @@ export default function ChildModal() {
             input={form.user_email}
             name="user_email"
             error={errors.user_email !== ""}
-            placeholder="Tu Email"
+            placeholder={idiom === "ES"? "Tu email": "Youemail"}
             onChange={handleChange}
             />
             <p 
@@ -180,7 +180,7 @@ export default function ChildModal() {
             input={form.message}
             name="message"
             error={errors.message !== ""}
-            placeholder="Tu Mensaje"
+            placeholder={idiom === "ES"? "Tu mensaje": "You messsage"}
             onChange={handleTextChange}
             />
             <p 
