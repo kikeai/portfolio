@@ -153,7 +153,7 @@ export default function ChildModal() {
           <h2 className='font-montserrat font-black italic "text-dark" text-center text-2xl md:text-3xl' id="child-modal-title">
             {idiom === "ES"? "Redacta un mail": "Write an email"}
           </h2>
-          <form className='flex flex-col items-center gap-5' onSubmit={handleSubmit}>
+          <form className='flex flex-col items-center gap-5' onSubmit={Object.values(form).some(x => x === "") || Object.values(errors).some(x => x !== "")? ()=>{}: handleSubmit}>
             <Input 
             input={form.user_name}
             name="user_name"
@@ -215,7 +215,11 @@ export default function ChildModal() {
               textES='Enviar mail'
               textUS='Send mail'
               type='submit'
-              onClick={() => {}}
+              onClick={(e) => {
+                e.preventDefault()
+                if(Object.values(form).some(x => x === "")) setMessageAl("OK")
+                else if(Object.values(errors).some(x => x !== "")) setMessageAl("BAD")
+              }}
               />
             </div>
           </form>
