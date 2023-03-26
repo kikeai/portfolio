@@ -96,28 +96,32 @@ export default function ChildModal() {
 
   const handleSubmit:React.MouseEventHandler<HTMLFormElement> = (e) => {
     e.preventDefault();
-    setLoading(true);
-    setResponse("");
-  
-    emailjs.send('service_7hyegsf', 'template_qz1zomu', {...form,
-        user_name: form.user_name.trim(),
-        user_email: form.user_email.trim(),
-        message: form.message.trim(),
-    }, 'kVa09E7jPyPe-GGdz')
-      .then((result) => {
-            setLoading(false);
-            setResponse(result.text);
-            setForm({
-              ...form,
-              user_name: "",
-              user_email: "",
-              message: ""
-            })
-      })
-      .catch((error) => {
-            setLoading(false);
-            setResponse(error.text);
-      })
+    if(Object.values(form).some(x => x === "") || Object.values(errors).some(x => x !== "")){
+      return;
+    } else {
+      setLoading(true);
+      setResponse("");
+    
+      emailjs.send('service_7hyegsf', 'template_qz1zomu', {...form,
+          user_name: form.user_name.trim(),
+          user_email: form.user_email.trim(),
+          message: form.message.trim(),
+      }, 'kVa09E7jPyPe-GGdz')
+        .then((result) => {
+              setLoading(false);
+              setResponse(result.text);
+              setForm({
+                ...form,
+                user_name: "",
+                user_email: "",
+                message: ""
+              })
+        })
+        .catch((error) => {
+              setLoading(false);
+              setResponse(error.text);
+        })
+    }
 
   }
 
@@ -153,7 +157,7 @@ export default function ChildModal() {
           <h2 className='font-montserrat font-black italic "text-dark" text-center text-2xl md:text-3xl' id="child-modal-title">
             {idiom === "ES"? "Redacta un mail": "Write an email"}
           </h2>
-          <form className='flex flex-col items-center gap-5' onSubmit={Object.values(form).some(x => x === "") || Object.values(errors).some(x => x !== "")? ()=>{}: handleSubmit}>
+          <form className='flex flex-col items-center gap-5' onSubmit={handleSubmit}>
             <Input 
             input={form.user_name}
             name="user_name"
@@ -216,7 +220,6 @@ export default function ChildModal() {
               textUS='Send mail'
               type='submit'
               onClick={(e) => {
-                e.preventDefault()
                 if(Object.values(form).some(x => x === "")) setMessageAl("OK")
                 else if(Object.values(errors).some(x => x !== "")) setMessageAl("BAD")
               }}
