@@ -173,7 +173,7 @@ export default function ChildModal() {
             input={form.user_email}
             name="user_email"
             error={errors.user_email !== ""}
-            placeholder={idiom === "ES"? "Tu email": "Youemail"}
+            placeholder={idiom === "ES"? "Tu email": "Your email"}
             onChange={handleChange}
             />
             <p 
@@ -184,7 +184,7 @@ export default function ChildModal() {
             input={form.message}
             name="message"
             error={errors.message !== ""}
-            placeholder={idiom === "ES"? "Tu mensaje": "You messsage"}
+            placeholder={idiom === "ES"? "Tu mensaje": "Your messsage"}
             onChange={handleTextChange}
             />
             <p 
