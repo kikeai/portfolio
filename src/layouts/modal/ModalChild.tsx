@@ -129,7 +129,7 @@ export default function ChildModal() {
   let resTextBad = idiom === "ES"? "*No se pudo enviar(Vuelve a intentar)": "*It could not send(Try again)"
 
   return (
-    <div>
+    <>
       <ButtonModal 
           icon={gmailIcon}
           text={idiom === "ES"? "Enviar mail": "Send Mail"}
@@ -228,6 +228,6 @@ export default function ChildModal() {
           </form>
         </Box>
       </Modal>
-    </div>
+    </>
   );
 }

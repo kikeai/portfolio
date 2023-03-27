@@ -36,7 +36,7 @@ export default function NestedModal() {
   };
 
   return (
-    <div>
+    <>
       <Modal
         sx={{
           display: "flex",
@@ -82,6 +82,6 @@ export default function NestedModal() {
           </Box>
         </Fade>
       </Modal>
-    </div>
+    </>
   );
 }
