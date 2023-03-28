@@ -33,21 +33,21 @@ const Presentation = () => {
                 whileInView="before"
                 variants={animatePres}
                 transition={{duration: 0.5}}
-                className={`flex ${mode? "text-light": "text-dark"} ${transition} text-center mb-2 md:mb-5 font-montserrat font-medium text-1xl sm:text-2xl md:text-3xl 2xl:text-5xl`}>
-                    {idiom === "ES"? presentationES: presentationUS} <img className="pl-2 h-5 sm:h-7 md:h-8 2xl:h-12" src={hand} alt="hand"/>
+                className={`flex ${mode? "text-light": "text-dark"} ${transition} text-center mb-2 md:mb-5 font-montserrat font-medium text-1xl sm:text-2xl md:text-3xl 2xl:text-4xl`}>
+                    {idiom === "ES"? presentationES: presentationUS} <img className="pl-2 h-5 sm:h-7 md:h-8 2xl:h-9" src={hand} alt="hand"/>
                 </motion.h4>
                 <motion.h2 
                 initial="initial"
                 whileInView="before"
                 variants={animatePres}
                 transition={{duration: 0.5}}
-                className={`${mode? "text-light": "text-dark"} ${transition} text-center font-montserrat font-black italic text-3xl sm:text-4xl md:text-6xl 2xl:text-8xl mb-2`}>{idiom === "ES"? title1ES: title1US}</motion.h2>
+                className={`${mode? "text-light": "text-dark"} ${transition} text-center font-montserrat font-black italic text-3xl sm:text-4xl md:text-6xl 2xl:text-7xl mb-2`}>{idiom === "ES"? title1ES: title1US}</motion.h2>
                 <motion.h2 
                 initial="initial"
                 whileInView="before"
                 variants={animatePres}
                 transition={{duration: 0.5}}
-                className={`${mode? "text-light": "text-dark"} ${transition} text-center font-montserrat font-black italic text-3xl sm:text-4xl md:text-6xl 2xl:text-8xl`}>{idiom === "ES"? title2ES: title2US}</motion.h2>
+                className={`${mode? "text-light": "text-dark"} ${transition} text-center font-montserrat font-black italic text-3xl sm:text-4xl md:text-6xl 2xl:text-7xl`}>{idiom === "ES"? title2ES: title2US}</motion.h2>
                 <motion.p
                 initial="initial"
                 whileInView="before"
