@@ -5,7 +5,7 @@ import { transition } from "../../App";
 const Slider = () => {
     const mode = useAppSelector(state => state.view.mode);
     const idiom = useAppSelector(state => state.view.idiom);
-    let textStyle = `${mode? "text-light": "text-dark"} font-montserrat font-black text-3xl 2xl:text-[42px] 2xl:w-[1920px] italic`
+    let textStyle = `${mode? "text-light": "text-dark"} ${transition} font-montserrat font-black text-3xl 2xl:text-[42px] 2xl:w-[1920px] italic`
     let fire = <img className="h-9 2xl:h-10 mr-4" src={fireEmoji} alt="fire" />;
 
     return (

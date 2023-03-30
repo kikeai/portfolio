@@ -18,7 +18,6 @@ const ModeIdiom = () => {
                     checked={mode}
                     onChange={() => {
                         dispatch(changeMode());
-                        dispatch(OpenCloseSidePanel());
                     }}
                     control={<MaterialUISwitch sx={{ m: 1 }} />}
                     label=""
@@ -27,7 +26,6 @@ const ModeIdiom = () => {
             <p
             className={`${textHeader} font-bold border-2 border-transparent rounded-md px-2 hover:cursor-pointer hover:bg-gray-600 hover:border-gray-300 hover:text-light`} onClick={() => {
                 dispatch(changeIdiom());
-                dispatch(OpenCloseSidePanel());
             }}>
                 {idiom}
             </p>

@@ -4,8 +4,6 @@ import { Fade } from '@mui/material';
 import { useAppDispatch, useAppSelector } from '../../store/store';
 import { OpenCloseModal} from '../../store/features/popups';
 import ButtonModal from './ButtonModal';
-import whatsappIcon from "../../assets/whatsapp-icon.svg";
-import linkedinIcon from "../../assets/linkedin-icon.svg";
 import ChildModal from './ModalChild';
 
 
@@ -57,7 +55,7 @@ export default function NestedModal() {
           <Box sx={{ ...styleParent }}>
             <h2 className={`font-montserrat font-black italic ${mode? "text-light": "text-dark"} text-center text-3xl`} id="parent-modal-title">{idiom === "ES"? 'Contáctame': 'Get in touch'}</h2>
             <ButtonModal 
-            icon={whatsappIcon}
+            icon='whatsapp'
             text="WhatsApp"
             textColor='light'
             bgColor='whatsapp'
@@ -68,7 +66,7 @@ export default function NestedModal() {
             }}
             />
             <ButtonModal 
-            icon={linkedinIcon}
+            icon='linkedin'
             text="LinkedIn"
             textColor='light'
             bgColor='linkedin'

@@ -1,10 +1,7 @@
 import { useAppDispatch, useAppSelector } from "../../../store/store";
-import logoBlack from "../../../assets/logo-negro.svg";
-import logoWhite from "../../../assets/logo-blanco.svg";
-import closeIconBlack from "../../../assets/close-negro.svg";
-import closeIconWhite from "../../../assets/close-blanco.svg";
-import { transition } from "../../../App";
 import { OpenCloseSidePanel } from "../../../store/features/popups";
+import CloseIcon from "../../../assets/svg/CloseIcon";
+import Logo from "../../../assets/svg/Logo";
 
 
 const Header = () => {
@@ -13,10 +10,10 @@ const Header = () => {
     return (
         <div className={`flex flex-row-reverse justify-between border-b ${mode? "border-b-light": "border-b-dark"} items-center w-full py-6 px-6`}>
             <div>
-                <img className={`${transition} h-5`} src={mode? logoWhite: logoBlack} alt="logo" />
+                <Logo />
             </div>
             <div onClick={() => {dispatch(OpenCloseSidePanel())}} className="hover:cursor-pointer">
-                <img className={`${transition} h-4`} src={mode? closeIconWhite: closeIconBlack} alt="closeicon" />
+                <CloseIcon />
             </div>
         </div>
     )

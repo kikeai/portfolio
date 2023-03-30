@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { OpenCloseModalMail } from "../../store/features/popups";
 import { useAppDispatch, useAppSelector } from "../../store/store";
 import emailjs from '@emailjs/browser';
@@ -10,7 +10,6 @@ import TextArea from "../../components/textArea/TextArea";
 import ButtonForm from "./ButtonForm";
 import { transition } from "../../App";
 import loader from '../../assets/loader.svg';
-import gmailIcon from "../../assets/Gmail-icon.svg";
 import validate from "./validate";
 
 
@@ -131,7 +130,7 @@ export default function ChildModal() {
   return (
     <>
       <ButtonModal 
-          icon={gmailIcon}
+          icon='gmail'
           text={idiom === "ES"? "Enviar mail": "Send Mail"}
           textColor={mode? 'light': 'dark'}
           bgColor={mode? 'dark': 'light'}

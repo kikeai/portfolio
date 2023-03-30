@@ -9,6 +9,7 @@ import { FormControlLabel } from "@mui/material";
 import MaterialUISwitch from "./togle";
 import {motion} from 'framer-motion';
 import { OpenCloseModal, OpenCloseSidePanel } from "../../store/features/popups";
+import Logo from "../../assets/svg/Logo";
 
 const container = {
     hidden: { opacity: 1, scale: 0 },
@@ -49,7 +50,7 @@ const Header = () => {
                 }}
                 className="flex items-center"
                 >
-                    <img className={`h-5 md:h-8 ${transition}`} src={`${mode? logoDark: logoLight}`} alt="logo kike" />
+                    <Logo />
                 </motion.div>
 
                 <motion.div 
@@ -57,10 +58,6 @@ const Header = () => {
                 initial="hidden"
                 animate="visible"
                 className="hidden md:flex md:items-center md:gap-12 md:visible">
-                    {/* <motion.p
-                    variants={item}
-                    className="text-lg border-2 border-transparent rounded-md px-2 hover:cursor-pointer hover:bg-gray-600 hover:border-gray-300 hover:text-light" onClick={() => dispatch(changeMode())}>{mode ? "🌚": "🌞"}</motion.p> */}
-                    
                     <FormControlLabel
                         checked={mode}
                         onChange={() => dispatch(changeMode())}
