@@ -1,9 +1,9 @@
-import { type Props } from '../project/Project'
+import { type PropsProject } from '../../types/types'
 import unBardo from '../../assets/unbardo-app.png'
 import wikidog from '../../assets/wikidogs-app.png'
 import RaM from '../../assets/rick-and-morty-app.png'
 
-const projectList: Props[] = [
+const projectList: PropsProject[] = [
   {
     image: unBardo,
     title: 'unBardo E-Commerce',

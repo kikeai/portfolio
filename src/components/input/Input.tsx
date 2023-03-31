@@ -1,14 +1,7 @@
 import { transition } from '../../App'
+import { type PropsInput } from '../../types/types'
 
-interface Props {
-  name: string
-  input: string
-  placeholder: string
-  error: boolean
-  onChange: React.ChangeEventHandler<HTMLInputElement>
-}
-
-const Input = ({ name, input, placeholder, error, onChange }: Props) => {
+const Input = ({ name, input, placeholder, error, onChange }: PropsInput) => {
   return (
     <div className={`${error ? 'bg-red-700' : 'bg-dark'} w-full ${transition} rounded-md`}>
       <input

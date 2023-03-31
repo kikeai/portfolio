@@ -1,14 +1,7 @@
 import { transition } from '../../App'
+import { type PropsTextArea } from '../../types/types'
 
-interface Props {
-  name: string
-  input: string
-  placeholder: string
-  error: boolean
-  onChange: React.ChangeEventHandler<HTMLTextAreaElement>
-}
-
-const TextArea = ({ name, input, placeholder, error, onChange }: Props) => {
+const TextArea = ({ name, input, placeholder, error, onChange }: PropsTextArea) => {
   return (
     <div className={`${error ? 'bg-red-700' : 'bg-dark'} w-full ${transition} rounded-md`}>
       <textarea

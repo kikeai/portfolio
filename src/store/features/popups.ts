@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit'
-import { type popups } from '../../types/types'
+import { type Popups } from '../../types/types'
 
-const initialState: popups = {
+const initialState: Popups = {
   sidepanel: false,
   contact: false,
   modal: false,

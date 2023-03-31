@@ -2,13 +2,7 @@ import { Link } from 'react-router-dom'
 import { transition } from '../../App'
 import { useAppSelector } from '../../store/store'
 import { motion } from 'framer-motion'
-
-interface Props {
-  name: string
-  imageLight: string
-  imageDark: string
-  url: string
-}
+import { type PropsCard } from '../../types/types'
 
 const item = {
   hidden: { y: 20, opacity: 0 },
@@ -18,7 +12,7 @@ const item = {
   }
 }
 
-const Card = ({ name, imageDark, imageLight, url }: Props) => {
+const Card = ({ name, imageDark, imageLight, url }: PropsCard) => {
   const mode = useAppSelector(state => state.view.mode)
 
   return (

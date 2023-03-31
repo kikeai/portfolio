@@ -1,12 +1,8 @@
 import ArrowButton from '../../../assets/svg/ArrowButton'
 import { useAppSelector } from '../../../store/store'
+import { type PropsUrlButton } from '../../../types/typeButtons'
 
-interface Props {
-  image: string
-  onClick: React.MouseEventHandler<HTMLButtonElement>
-}
-
-const UrlButton = ({ onClick, image }: Props) => {
+const UrlButton = ({ onClick }: PropsUrlButton) => {
   const mode = useAppSelector(state => state.view.mode)
 
   return (

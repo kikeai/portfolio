@@ -2,8 +2,9 @@ import linkedin from '../../assets/linkedin-boton.svg'
 import github from '../../assets/github-boton.svg'
 import twitter from '../../assets/twitter-boton.svg'
 import instagram from '../../assets/instagram-boton.svg'
+import { type Socials } from '../../types/types'
 
-export const socials = [
+export const socials: Socials[] = [
   {
     id: 1,
     image: linkedin,

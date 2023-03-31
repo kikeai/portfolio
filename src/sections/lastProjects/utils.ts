@@ -1,4 +1,4 @@
-import { type LabelType } from '../../components/labels/Labels'
+import { type LabelType } from '../../types/types'
 
 export const labels: LabelType[] = [
   {

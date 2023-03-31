@@ -11,13 +11,7 @@ import ButtonForm from './ButtonForm'
 import { transition } from '../../App'
 import loader from '../../assets/loader.svg'
 import validate from './validate'
-
-export interface Form {
-  from_name: string
-  user_name: string
-  user_email: string
-  message: string
-}
+import { type Form } from '../../types/types'
 
 export default function ChildModal () {
   const dispatch = useAppDispatch()

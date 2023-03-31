@@ -1,13 +1,8 @@
 import { useAppSelector } from '../../../store/store'
 import { motion } from 'framer-motion'
+import { type PropsButton } from '../../../types/typeButtons'
 
-interface Props {
-  textES: string
-  textUS: string
-  onClick: React.MouseEventHandler<HTMLButtonElement>
-}
-
-const Button = ({ onClick, textES, textUS }: Props) => {
+const Button = ({ onClick, textES, textUS }: PropsButton) => {
   const mode = useAppSelector(state => state.view.mode)
   const idiom = useAppSelector(state => state.view.idiom)
 

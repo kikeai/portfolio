@@ -3,14 +3,9 @@ import AboutMeIcon from '../../../assets/svg/AboutMeIcon'
 import ContactIcon from '../../../assets/svg/ContactIcon'
 import ProjectsIcon from '../../../assets/svg/ProjectsIcon'
 import { useAppSelector } from '../../../store/store'
+import { type PropsButtonSection } from '../../../types/typeButtons'
 
-interface Props {
-  icon: string
-  text: string
-  onClick: React.MouseEventHandler<HTMLDivElement>
-}
-
-const ButtonSection = ({ icon, text, onClick }: Props) => {
+const ButtonSection = ({ icon, text, onClick }: PropsButtonSection) => {
   const mode = useAppSelector(state => state.view.mode)
   return (
     <div

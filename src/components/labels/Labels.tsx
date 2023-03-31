@@ -1,15 +1,7 @@
 import Label from '../label/Label'
+import { type PropsLabel } from '../../types/types'
 
-export interface LabelType {
-  textUS: string
-  textES: string
-}
-
-interface Props {
-  labels: LabelType[]
-}
-
-const Labels = ({ labels }: Props) => {
+const Labels = ({ labels }: PropsLabel) => {
   return (
     <div className='flex flex-wrap gap-3 xl:gap-5'>
       {

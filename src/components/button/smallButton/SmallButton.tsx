@@ -1,9 +1,6 @@
-interface Props {
-  image: string
-  onClick: React.MouseEventHandler<HTMLButtonElement>
-}
+import { type PropsImageButton } from '../../../types/typeButtons'
 
-const SmallButton = ({ onClick, image }: Props) => {
+const SmallButton = ({ onClick, image }: PropsImageButton) => {
   return (
         <button
         onClick={onClick}

@@ -1,8 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit'
-import { type view } from '../../types/types'
+import { type View } from '../../types/types'
 import { getItem, setItem } from '../../utils/localStorage'
 
-const initialState: view = {
+const initialState: View = {
   idiom: getItem('idiom'),
   mode: getItem('mode')
 }

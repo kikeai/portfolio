@@ -1,4 +1,4 @@
-import { type Form } from './ModalChild'
+import { type Form } from '../../types/types'
 const nameRegex = /^[a-zA-Z\s]*$/
 const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i
 

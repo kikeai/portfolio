@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { useState } from 'react'
-import { type Technology, techs1, techs2, techs3 } from '../../sections/Technologies/tech'
+import { type Technology } from '../../types/types'
+import { techs1, techs2, techs3 } from '../../sections/Technologies/tech'
 import Button from '../button/normalButton/Button'
 import Card from '../card/Card'
 import { motion } from 'framer-motion'

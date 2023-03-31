@@ -1,15 +1,7 @@
 import SocialIcons from '../../assets/svg/SocialIcons'
+import { type PropsButtonModal } from '../../types/typeButtons'
 
-interface Props {
-  icon: string
-  bgColor: string
-  borderColor: string
-  textColor: string
-  text: string
-  onClick: React.MouseEventHandler<HTMLButtonElement>
-}
-
-const ButtonModal = ({ onClick, text, bgColor, borderColor, textColor, icon }: Props) => {
+const ButtonModal = ({ onClick, text, bgColor, borderColor, textColor, icon }: PropsButtonModal) => {
   return (
     <button
     onClick={onClick}

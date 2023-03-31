@@ -1,11 +1,7 @@
 import { useAppSelector } from '../../../store/store'
+import { type PropsImageButton } from '../../../types/typeButtons'
 
-interface Props {
-  image: string
-  onClick: React.MouseEventHandler<HTMLButtonElement>
-}
-
-const ImageButton = ({ onClick, image }: Props) => {
+const ImageButton = ({ onClick, image }: PropsImageButton) => {
   const mode = useAppSelector(state => state.view.mode)
   return (
     <button

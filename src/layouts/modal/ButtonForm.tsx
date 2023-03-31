@@ -1,14 +1,7 @@
 import { useAppSelector } from '../../store/store'
+import { type PropsButtonForm } from '../../types/typeButtons'
 
-interface Props {
-  type: 'button' | 'submit'
-  textES: string
-  textUS: string
-  disabled: boolean
-  onClick: React.MouseEventHandler<HTMLButtonElement>
-}
-
-const ButtonForm = ({ onClick, textES, textUS, type, disabled }: Props) => {
+const ButtonForm = ({ onClick, textES, textUS, type, disabled }: PropsButtonForm) => {
   const idiom = useAppSelector(state => state.view.idiom)
   return (
     <button

@@ -22,14 +22,7 @@ import tailwindWhite from '../../assets/tailwind-negro.svg'
 import tailwindBlack from '../../assets/tailwind-blanco.svg'
 import githubWhite from '../../assets/github-negro.svg'
 import githubBlack from '../../assets/github-blanco.svg'
-
-export interface Technology {
-  id: number
-  name: string
-  imageLight: string
-  imageDark: string
-  url: string
-}
+import { type Technology } from '../../types/types'
 
 export const techs1: Technology[] = [
   {

@@ -1,12 +1,8 @@
 import { transition } from '../../App'
 import { useAppSelector } from '../../store/store'
+import { type LabelType } from '../../types/types'
 
-interface Props {
-  textES: string
-  textUS: string
-}
-
-const Label = ({ textES, textUS }: Props) => {
+const Label = ({ textES, textUS }: LabelType) => {
   const mode = useAppSelector(state => state.view.mode)
   const idiom = useAppSelector(state => state.view.idiom)
   return (

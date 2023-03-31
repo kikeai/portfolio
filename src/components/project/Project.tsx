@@ -3,20 +3,10 @@ import { useAppSelector } from '../../store/store'
 import { transition } from '../../App'
 import Labels from '../labels/Labels'
 import { labels } from '../../sections/lastProjects/utils'
-import arrowButton from '../../assets/arrow-button.svg'
-import arrowButtonBlack from '../../assets/arrow-button-black.svg'
 import UrlButton from '../button/urlButton/UrlButton'
+import { type PropsProject } from '../../types/types'
 
-export interface Props {
-  image: string
-  title: string
-  descriptionES: string
-  descriptionUS: string
-  url: React.MouseEventHandler<HTMLButtonElement>
-  reverse: boolean
-}
-
-const Project = ({ image, title, descriptionES, descriptionUS, url, reverse }: Props) => {
+const Project = ({ image, title, descriptionES, descriptionUS, url, reverse }: PropsProject) => {
   const mode = useAppSelector(state => state.view.mode)
   const idiom = useAppSelector(state => state.view.idiom)
   return (
@@ -35,7 +25,6 @@ const Project = ({ image, title, descriptionES, descriptionUS, url, reverse }: P
         <Labels labels={labels} />
         <div>
           <UrlButton
-          image={mode ? arrowButtonBlack : arrowButton}
           onClick={url}
           />
         </div>
