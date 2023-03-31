@@ -1,6 +1,6 @@
-import { type Label } from '../../components/labels/Labels'
+import { type LabelType } from '../../components/labels/Labels'
 
-export const labels: Label[] = [
+export const labels: LabelType[] = [
   {
     textES: 'Sitio Web',
     textUS: 'Website'
