@@ -1,26 +1,27 @@
-import Label from "../label/Label"
+import Label from '../label/Label'
 
-export type Label = {
-    textUS: string
-    textES: string
+export interface LabelType {
+  textUS: string
+  textES: string
 }
 
 interface Props {
-    labels: Label[]
+  labels: LabelType[]
 }
 
-const Labels = ({labels}: Props) => {
-    return (
-        <div className="flex flex-wrap gap-3 xl:gap-5">
-            {
-                labels.map(l => <Label
-                key={l.textES + l.textUS}
-                textES={l.textES}
-                textUS={l.textUS}
-                />)
-            }
-        </div>
-    )
+const Labels = ({ labels }: Props) => {
+  return (
+    <div className='flex flex-wrap gap-3 xl:gap-5'>
+      {
+        labels.map(l =>
+          <Label
+          key={l.textES + l.textUS}
+          textES={l.textES}
+          textUS={l.textUS}
+        />)
+      }
+    </div>
+  )
 }
 
-export default Labels;
+export default Labels

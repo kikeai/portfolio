@@ -1,20 +1,18 @@
-import { useAppSelector } from "../../../store/store"
-
-type Props = {
-    image: string
-    onClick: React.MouseEventHandler<HTMLButtonElement>
+interface Props {
+  image: string
+  onClick: React.MouseEventHandler<HTMLButtonElement>
 }
 
-const SmallButton = ({onClick, image}: Props) => {
-    const mode = useAppSelector(state => state.view.mode);
-    const idiom = useAppSelector(state => state.view.idiom);
-    return (
+const SmallButton = ({ onClick, image }: Props) => {
+  return (
         <button
         onClick={onClick}
-        className={`bg-dark rounded-full transition-all duration-200 hover:cursor-pointer`}>
-            <img className={`bg-light text-dark rounded-full  border-2 border-dark translate-x-[-0.20em] translate-y-[-0.20em] transition-all duration-200 hover:text-light active:translate-x-[0] active:translate-y-[0]`} src={image} alt="red" />
+        className='bg-dark rounded-full transition-all duration-200 hover:cursor-pointer'>
+            <img className='bg-light text-dark rounded-full  border-2 border-dark translate-x-[-0.20em] translate-y-[-0.20em] transition-all duration-200 hover:text-light active:translate-x-[0] active:translate-y-[0]'
+            src={image}
+            alt='red' />
         </button>
-    )
+  )
 }
 
-export default SmallButton;
+export default SmallButton
