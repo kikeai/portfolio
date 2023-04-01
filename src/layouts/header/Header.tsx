@@ -36,7 +36,7 @@ const Header = () => {
   const textHeader = `${mode ? 'text-light' : 'text-gray-600'} ${transition} text-lg 2xl:text-2xl font-montserrat`
 
   return (
-    <header className={`fixed top-0 backdrop-blur z-40 flex px-12 h-20 justify-center items-center border-b ${transition} ${mode ? 'border-b-dark' : 'border-b-light'} md:px-20 md:h-28 w-full`}>
+    <header className={`fixed top-0 backdrop-blur z-40 flex px-12 h-20 justify-center items-center border-b ${transition} ${mode ? 'border-b-dark' : 'border-b-light'} lg:px-20 lg:h-28 w-full`}>
       <div className='flex justify-between w-full max-w-[1440px]'>
         <motion.div
           initial={{
@@ -54,7 +54,7 @@ const Header = () => {
         variants={container}
         initial='hidden'
         animate='visible'
-        className='hidden md:flex md:items-center md:gap-12 md:visible'>
+        className='hidden lg:flex lg:items-center lg:gap-12 lg:visible'>
           <FormControlLabel
           checked={mode}
           onChange={() => dispatch(changeMode())}
@@ -85,7 +85,7 @@ const Header = () => {
 
           <motion.p
           variants={item}
-          className={`${textHeader} font-bold border-2 border-transparent rounded-md px-2 hover:cursor-pointer hover:bg-gray-600 hover:border-gray-300 hover:text-light`}
+          className={`${textHeader} font-bold border-2 border-transparent rounded-lg px-2 hover:cursor-pointer hover:bg-gray-600 hover:border-gray-300 hover:text-light`}
           onClick={() => dispatch(changeIdiom())}>
             {idiom}
           </motion.p>
@@ -93,10 +93,10 @@ const Header = () => {
         </motion.div>
 
         <div
-        onClick={() => dispatch(OpenCloseSidePanel())}
-        className='md:hidden'>
+        className='flex items-center lg:hidden'>
           <img
-          className='hover:cursor-pointer md:hidden'
+          className='hover:cursor-pointer h-4 md:h-5'
+          onClick={() => dispatch(OpenCloseSidePanel())}
           src={mode ? menuIconlight : menuIconDark}
           alt='menu' />
         </div>
