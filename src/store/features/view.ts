@@ -16,7 +16,7 @@ export const ViewSlice = createSlice({
         setItem('idiom', 'ES')
         state.idiom = getItem('idiom')
       } else if (state.idiom === 'ES') {
-        setItem('idiom', 'US')
+        setItem('idiom', 'EN')
         state.idiom = getItem('idiom')
       } else {
         setItem('idiom', 'ES')

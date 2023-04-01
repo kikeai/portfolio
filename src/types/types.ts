@@ -1,5 +1,7 @@
+import { type IDIOM } from '../constants'
+
 export interface View {
-  idiom: string
+  idiom: keyof typeof IDIOM
   mode: boolean
 }
 
