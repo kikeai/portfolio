@@ -5,6 +5,7 @@ import { useAppDispatch, useAppSelector } from '../../store/store'
 import { OpenCloseModal } from '../../store/features/popups'
 import ButtonModal from './ButtonModal'
 import ChildModal from './ModalChild'
+import { idiomParser, modeParser } from '../../utils/modeView'
 
 export default function NestedModal () {
   const dispatch = useAppDispatch()
@@ -51,9 +52,9 @@ export default function NestedModal () {
       >
         <Fade in={open}>
           <Box sx={{ ...styleParent }}>
-            <h2 className={`font-montserrat font-black italic ${mode ? 'text-light' : 'text-dark'} text-center text-3xl`}
+            <h2 className={`font-montserrat font-black italic ${modeParser(mode, false, 'text')} text-center text-3xl`}
             id='parent-modal-title'>
-              {idiom === 'ES' ? 'Contáctame' : 'Get in touch'}
+              {idiomParser(idiom, 'Contáctame', 'Get in touch')}
             </h2>
             <ButtonModal
             icon='whatsapp'

@@ -8,6 +8,7 @@ import MaterialUISwitch from './togle'
 import { motion } from 'framer-motion'
 import { OpenCloseModal, OpenCloseSidePanel } from '../../store/features/popups'
 import Logo from '../../assets/svg/Logo'
+import { idiomParser } from '../../utils/modeView'
 
 const container = {
   hidden: { opacity: 1, scale: 0 },
@@ -33,7 +34,7 @@ const Header = () => {
   const dispatch = useAppDispatch()
   const idiom = useAppSelector(state => state.view.idiom)
   const mode = useAppSelector(state => state.view.mode)
-  const textHeader = `${mode ? 'text-light' : 'text-gray-600'} ${transition} text-lg 2xl:text-2xl font-montserrat`
+  const textHeader = `${mode ? 'text-light' : 'text-gray-700'} ${transition} text-lg 2xl:text-2xl font-montserrat`
 
   return (
     <header className={`fixed top-0 backdrop-blur z-40 flex px-12 h-20 justify-center items-center border-b ${transition} ${mode ? 'border-b-dark' : 'border-b-light'} lg:px-20 lg:h-28 w-full`}>
@@ -66,21 +67,21 @@ const Header = () => {
           variants={item}
           className={`${textHeader} font-medium hover:underline hover:text-brand`}
           href='#about'>
-            {idiom === 'ES' ? 'Sobre mí' : 'About me'}
+            {idiomParser(idiom, 'Sobre mí', 'About me')}
           </motion.a>
 
           <motion.a
           variants={item}
           className={`${textHeader} font-medium hover:underline hover:text-brand`}
           href='#projects'>
-            {idiom === 'ES' ? 'Proyectos' : 'Projects'}
+            {idiomParser(idiom, 'Proyectos', 'Projects')}
           </motion.a>
 
           <motion.p
           variants={item}
           className={`${textHeader} font-medium hover:underline hover:text-brand hover:cursor-pointer`}
           onClick={() => dispatch(OpenCloseModal())}>
-            {idiom === 'ES' ? 'Contacto' : 'Contact'}
+            {idiomParser(idiom, 'Contacto', 'Contact')}
           </motion.p>
 
           <motion.p

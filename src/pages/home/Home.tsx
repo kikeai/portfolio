@@ -8,6 +8,7 @@ import { useAppDispatch, useAppSelector } from '../../store/store'
 import LastProjects from '../../sections/lastProjects/LastProjects'
 import Sidepanel from '../../layouts/sidepanel/Sidepanel'
 import NestedModal from '../../layouts/modal/Modal'
+import { modeParser } from '../../utils/modeView'
 
 const Home = () => {
   const mode = useAppSelector(state => state.view.mode)
@@ -22,7 +23,7 @@ const Home = () => {
   }, [])
 
   return (
-    <div className={`${mode ? 'bg-dark' : 'bg-light'} transition-all duration-200 h-screen bg`}>
+    <div className={`${modeParser(mode, true, 'bg')} transition-all duration-200 h-screen bg`}>
       <NestedModal />
       <Sidepanel />
       <Presentation />

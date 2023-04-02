@@ -5,6 +5,7 @@ import Labels from '../labels/Labels'
 import { labels } from '../../sections/lastProjects/utils'
 import UrlButton from '../button/urlButton/UrlButton'
 import { type PropsProject } from '../../types/types'
+import { idiomParser, modeParser } from '../../utils/modeView'
 
 const Project = ({ image, title, descriptionES, descriptionUS, url, reverse }: PropsProject) => {
   const mode = useAppSelector(state => state.view.mode)
@@ -16,11 +17,11 @@ const Project = ({ image, title, descriptionES, descriptionUS, url, reverse }: P
       </div>
 
       <div className='flex flex-col gap-8 mt-8 mb-8 xl:mt-0 xl:mb-0 xl:max-w-[50%]'>
-        <h3 className={`${mode ? 'text-light' : 'text-dark'} ${transition} font-montserrat font-black italic text-2xl xl:text-3xl`}>
+        <h3 className={`${modeParser(mode, false, 'text')} ${transition} font-montserrat font-black italic text-2xl xl:text-3xl`}>
           {title}
         </h3>
-        <p className={`${mode ? 'text-light' : 'text-gray-700'} ${transition} max-w-[600px] xl:max-w-none font-montserrat font-medium text-lg md:text-xl`}>
-          {idiom === 'ES' ? descriptionES : descriptionUS}
+        <p className={`${modeParser(mode, false, 'text', 'gray-700')} ${transition} max-w-[600px] xl:max-w-none font-montserrat font-medium text-lg md:text-xl`}>
+          {idiomParser(idiom, descriptionES, descriptionUS)}
         </p>
         <Labels labels={labels} />
         <div>

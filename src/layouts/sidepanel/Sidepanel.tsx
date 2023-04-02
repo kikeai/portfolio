@@ -3,6 +3,7 @@ import { OpenCloseModal, OpenCloseSidePanel } from '../../store/features/popups'
 import Header from './header/Header'
 import ModeIdiom from './ModeIdiom/ModeIdiom'
 import ButtonSection from './buttonSection/ButtonSection'
+import { idiomParser, modeParser } from '../../utils/modeView'
 
 const Sidepanel = () => {
   const dispatch = useAppDispatch()
@@ -12,12 +13,12 @@ const Sidepanel = () => {
 
   return (
     <div className={`flex flex-row-reverse fixed z-50 backdrop-blur ${openClose ? 'opacity-100 visible' : 'opacity-0 invisible'} transition-all ease-in-out duration-500 ${mode ? 'bg-light/60' : 'bg-dark/60'} w-full`}>
-      <div className={`${mode ? 'bg-dark' : 'bg-light'} ${openClose ? 'translate-x-0' : 'translate-x-[100%]'} transition-all ease-in-out duration-500 w-3/4 max-w-[400px] h-screen`}>
+      <div className={`${modeParser(mode, true, 'bg')} ${openClose ? 'translate-x-0' : 'translate-x-[100%]'} transition-all ease-in-out duration-500 w-3/4 max-w-[400px] h-screen`}>
         <Header />
         <ModeIdiom />
         <ButtonSection
         icon='aboutMe'
-        text={idiom === 'ES' ? 'Sobre mí' : 'About me'}
+        text={idiomParser(idiom, 'Sobre mí', 'About me')}
         onClick={() => {
           window.location.replace('/#about')
           dispatch(OpenCloseSidePanel())
@@ -26,7 +27,7 @@ const Sidepanel = () => {
 
         <ButtonSection
         icon='projects'
-        text={idiom === 'ES' ? 'Proyectos' : 'Projects'}
+        text={idiomParser(idiom, 'Proyectos', 'Projects')}
         onClick={() => {
           window.location.replace('/#projects')
           dispatch(OpenCloseSidePanel())
@@ -35,7 +36,7 @@ const Sidepanel = () => {
 
         <ButtonSection
         icon='contact'
-        text={idiom === 'ES' ? 'Contacto' : 'Contact'}
+        text={idiomParser(idiom, 'Contacto', 'Contact')}
         onClick={() => {
           dispatch(OpenCloseModal())
           dispatch(OpenCloseSidePanel())

@@ -3,12 +3,13 @@ import { changeIdiom, changeMode } from '../../../store/features/view'
 import { FormControlLabel } from '@mui/material'
 import MaterialUISwitch from '../../header/togle'
 import { transition } from '../../../App'
+import { modeParser } from '../../../utils/modeView'
 
 const ModeIdiom = () => {
   const mode = useAppSelector(state => state.view.mode)
   const idiom = useAppSelector(state => state.view.idiom)
   const dispatch = useAppDispatch()
-  const textHeader = `${mode ? 'text-light' : 'text-gray-600'} ${transition} text-lg 2xl:text-2xl font-montserrat`
+  const textHeader = `${modeParser(mode, false, 'text', 'gray-700')} ${transition} text-lg 2xl:text-2xl font-montserrat`
   return (
     <div className='flex justify-between items-center py-6 px-6 w-full'>
       <div>

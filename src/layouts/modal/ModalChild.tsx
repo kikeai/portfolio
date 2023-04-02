@@ -12,6 +12,8 @@ import { transition } from '../../App'
 import loader from '../../assets/loader.svg'
 import validate from './validate'
 import { type Form } from '../../types/types'
+import { resTextOkES, resTextOkEN, resTextBadES, resTextBadEN } from '../../utils/texts'
+import { idiomParser } from '../../utils/modeView'
 
 export default function ChildModal () {
   const dispatch = useAppDispatch()
@@ -116,9 +118,6 @@ export default function ChildModal () {
     }
   }
 
-  const resTextOk = idiom === 'ES' ? '*Se envió correctamente' : '*It was sent correctly'
-  const resTextBad = idiom === 'ES' ? '*No se pudo enviar(Vuelve a intentar)' : '*It could not send(Try again)'
-
   return (
     <>
       <ButtonModal
@@ -147,7 +146,7 @@ export default function ChildModal () {
         <Box sx={{ ...styleChild }}>
           <h2 className='font-montserrat font-black italic text-dark text-center text-2xl md:text-3xl'
           id='child-modal-title'>
-            {idiom === 'ES' ? 'Redacta un mail' : 'Write an email'}
+            {idiomParser(idiom, 'Redacta un mail', 'Write an email')}
           </h2>
           <form
           className='flex flex-col items-center gap-5'
@@ -156,7 +155,7 @@ export default function ChildModal () {
             input={form.user_name}
             name='user_name'
             error={errors.user_name !== ''}
-            placeholder={idiom === 'ES' ? 'Tu nombre' : 'Your name'}
+            placeholder={idiomParser(idiom, 'Tu nombre', 'Your name')}
             onChange={handleChange}
             />
 
@@ -169,7 +168,7 @@ export default function ChildModal () {
             input={form.user_email}
             name='user_email'
             error={errors.user_email !== ''}
-            placeholder={idiom === 'ES' ? 'Tu email' : 'Your email'}
+            placeholder={idiomParser(idiom, 'Tu email', 'Your email')}
             onChange={handleChange}
             />
 
@@ -182,7 +181,7 @@ export default function ChildModal () {
             input={form.message}
             name='message'
             error={errors.message !== ''}
-            placeholder={idiom === 'ES' ? 'Tu mensaje' : 'Your messsage'}
+            placeholder={idiomParser(idiom, 'Tu mensaje', 'Your messsage')}
             onChange={handleTextChange}
             />
 
@@ -199,12 +198,12 @@ export default function ChildModal () {
 
             <p
             className={`${messageAl !== '' ? '' : 'hidden'} font-montserrat text-base text-center text-red-700`}>
-              {messageAl === 'OK' ? idiom === 'ES' ? '*Llena todos los campos' : '*fill all the fields' : idiom === 'ES' ? '*Corrige los Errores' : '*Correct the mistakes'}
+              {messageAl === 'OK' ? idiomParser(idiom, '*Llena todos los campos', '*fill all the fields') : idiomParser(idiom, '*Corrige los Errores', '*Correct the mistakes')}
             </p>
 
             <p
             className={`${response !== '' ? '' : 'hidden'} font-montserrat text-base text-center ${response === 'OK' ? 'text-green-600' : 'text-red-700'}`}>
-              {response === 'OK' ? resTextOk : resTextBad}
+              {response === 'OK' ? idiomParser(idiom, resTextOkES, resTextOkEN) : idiomParser(idiom, resTextBadES, resTextBadEN)}
             </p>
 
             <div className='flex justify-center w-full gap-6'>
