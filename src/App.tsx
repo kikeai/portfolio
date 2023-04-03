@@ -7,7 +7,7 @@ function App () {
   return (
     <div>
       <Routes>
-        <Route path='*' element={<PageNotFound />} />
+        <Route path='/404' element={<PageNotFound />} />
         <Route path='/' element={<Home />} />
       </Routes>
     </div>
