@@ -8,7 +8,7 @@ function App () {
     <div>
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='/hola' element={<PageNotFound />} />
+        <Route path='*' element={<PageNotFound />} />
       </Routes>
     </div>
   )
