@@ -8,7 +8,6 @@ import Slider from '../../components/Slider/Slider'
 import { motion } from 'framer-motion'
 import { OpenCloseModal } from '../../store/features/popups'
 import { idiomParser, modeParser } from '../../utils/modeView'
-import { useNavigate } from 'react-router-dom'
 
 const animatePres = {
   initial: { y: '60px', opacity: 0 },
@@ -23,7 +22,6 @@ const Presentation = () => {
   const dispatch = useAppDispatch()
   const idiom = useAppSelector(state => state.view.idiom)
   const mode = useAppSelector(state => state.view.mode)
-  const navigate = useNavigate()
   return (
     <section className={`flex flex-col justify-between items-center ${modeParser(mode, true, 'bg')} ${transition} w-full h-screen`} id='presentation'>
       <Header />
@@ -68,8 +66,7 @@ const Presentation = () => {
             <div className='flex mt-10 gap-5 md:gap-8'>
               <Button onClick={() => { dispatch(OpenCloseModal()) }} textES='Contáctame' textUS='Get in touch' />
               <Button onClick={() => {
-                // window.location.replace('/#projects')
-                navigate('/hola')
+                window.location.replace('/#projects')
               }} textES='Ver proyectos' textUS='View projects' />
             </div>
         </div>
