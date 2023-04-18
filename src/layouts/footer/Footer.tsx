@@ -11,7 +11,7 @@ const Footer = () => {
   const idiom = useAppSelector(state => state.view.idiom)
 
   return (
-    <footer className='flex justify-center w-full px-12 md:px-20 py-8 bg-brand' id='footer'>
+    <footer className='flex justify-center w-full px-12 md:px-20 pt-16 pb-8 bg-brand' id='footer'>
       <div className='flex flex-col w-full max-w-[1440px]'>
 
         <div className='flex flex-col md:flex-row justify-between pb-8 border-b-2 border-b-light'>
@@ -33,7 +33,7 @@ const Footer = () => {
             onClick={() => { dispatch(OpenCloseModal()) }} />
 
             <p className='font-montserrat font-bold text-lg mt-6 text-light'>
-              {idiomParser(idiom, 'Sigueme', 'Follow me')}
+              {idiomParser(idiom, 'Sígueme', 'Follow me')}
             </p>
 
             <div className='flex gap-4 pt-5'>
