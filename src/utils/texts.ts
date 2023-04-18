@@ -1,6 +1,6 @@
 // ABOUT SECTION
-export const aboutMeES = 'Me llamo Luis García pero me dicen Kike y soy de Venezuela, tengo 19 años y soy Developer web junior con conocimientos en JavaScript, HTML, CSS, React.js, Redux, node.js y varias tecnologías más entre frontend y backend, además soy diseñador gráfico con experiencia en branding y diseño para RRSS.'
-export const aboutMeEN = 'My name is Luis Garcia but they call me kike and I’m from Venezuela, I’m 19 years old and I’m a junior web developer with knowledge in JavaScript, HTML,CSS, React.js, Redux, node.js and various other technologies between frontend and backend, I’m also graphic designer with experience in branding and design for RRSS.'
+export const aboutMeES = 'Me llamo Luis García pero me dicen Kike y soy de Venezuela, tengo 19 años y soy Developer web junior con conocimientos en JavaScript, TypeScript, HTML, CSS, ReactJS, Redux, NodeJS y varias tecnologías más entre frontend y backend, además soy diseñador gráfico con experiencia en branding y diseño para RRSS.'
+export const aboutMeEN = 'My name is Luis Garcia but they call me kike and I’m from Venezuela, I’m 19 years old and I’m a junior web developer with knowledge in JavaScript, TypeScript, HTML,CSS, ReactJS, Redux, NodeJS and various other technologies between frontend and backend, I’m also graphic designer with experience in branding and design for RRSS.'
 
 // PRESENTATION SECTION
 export const presentationES = 'Hola, soy Kike'
