@@ -9,8 +9,8 @@ export const title1ES = 'Diseñador Digital'
 export const title2ES = 'Desarrollador Full Stack'
 export const title1EN = 'Digital Designer'
 export const title2EN = 'Full Stack Developer'
-export const descriptionES = 'Una persona creativa y proactiva de Venezuela, apasionado por la creación de webs funcionales'
-export const descriptionEN = 'A creative and proactive person from Venezuela who is passionate about creating functional websites.'
+export const descriptionES = 'Una persona creativa, proactiva y apasionada por la creación de páginas webs funcionales.'
+export const descriptionEN = 'A creative, proactive and passionate person for the creation of functional websites.'
 
 // FOOTER
 export const footerTittleEN = 'GOT A PROJECT? I AM AVAILABLE LET’S TO TALK.'
