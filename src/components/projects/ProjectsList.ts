@@ -9,7 +9,7 @@ const projectList: PropsProject[] = [
     title: 'unBardo E-Commerce',
     descriptionES: 'diseño de pagina web para una marca deportiva, donde se puede comprar ropa deportiva de alta calidad',
     descriptionUS: 'Website design for a sports brand, where you can buy high quality sportswear',
-    url: () => { window.open('https://unbardo.com.ar/') },
+    url: () => { window.open('https://unbardodesign-front.vercel.app/') },
     reverse: false
   },
   {
