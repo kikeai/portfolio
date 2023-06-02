@@ -49,6 +49,7 @@ const Cards = () => {
       <motion.div
       initial='hidden'
       whileInView='visible'
+      viewport={{ once: true, amount: 0.5 }}
       variants={container}
       className='flex flex-wrap justify-center gap-6 sm:gap-12 pb-10'>
         {
@@ -67,6 +68,7 @@ const Cards = () => {
               ? <motion.div
                 initial='hidden'
                 whileInView={'visible'}
+                viewport={{ once: true, amount: 0.5 }}
                 variants={container}
                 className='flex flex-wrap justify-center gap-6 sm:gap-12 pb-10'>
                     {
@@ -86,6 +88,7 @@ const Cards = () => {
               ? <motion.div
                 initial='hidden'
                 whileInView={'visible'}
+                viewport={{ once: true, amount: 0.5 }}
                 variants={container}
                 className='flex flex-wrap justify-center gap-6 sm:gap-12 pb-10'>
                     {
