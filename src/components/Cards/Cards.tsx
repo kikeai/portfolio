@@ -64,52 +64,54 @@ const Cards = () => {
         }
       </motion.div>
 
-            {show8
-              ? <motion.div
-                initial='hidden'
-                whileInView={'visible'}
-                viewport={{ once: true, amount: 0.5 }}
-                variants={container}
-                className='flex flex-wrap justify-center gap-6 sm:gap-12 pb-10'>
-                    {
-                      renderTech2.map(t =>
-                        <Card
-                        key={t.id}
-                        name={t.name}
-                        imageDark={t.imageDark}
-                        imageLight={t.imageLight}
-                        url={t.url}
-                      />)
-                    }
-                </motion.div>
-              : null}
+      {show8
+        ? <motion.div
+          initial='hidden'
+          whileInView={'visible'}
+          viewport={{ once: true, amount: 0.5 }}
+          variants={container}
+          className='flex flex-wrap justify-center gap-6 sm:gap-12 pb-10'>
+            {
+              renderTech2.map(t =>
+                <Card
+                key={t.id}
+                name={t.name}
+                imageDark={t.imageDark}
+                imageLight={t.imageLight}
+                url={t.url}
+              />)
+            }
+          </motion.div>
+        : null
+      }
 
-            {show12
-              ? <motion.div
-                initial='hidden'
-                whileInView={'visible'}
-                viewport={{ once: true, amount: 0.5 }}
-                variants={container}
-                className='flex flex-wrap justify-center gap-6 sm:gap-12 pb-10'>
-                    {
-                      renderTech3.map(t =>
-                        <Card
-                        key={t.id}
-                        name={t.name}
-                        imageDark={t.imageDark}
-                        imageLight={t.imageLight}
-                        url={t.url}
-                      />)
-                    }
-                </motion.div>
-              : null}
+      {show12
+        ? <motion.div
+          initial='hidden'
+          whileInView={'visible'}
+          viewport={{ once: true, amount: 0.5 }}
+          variants={container}
+          className='flex flex-wrap justify-center gap-6 sm:gap-12 pb-10'>
+            {
+              renderTech3.map(t =>
+                <Card
+                key={t.id}
+                name={t.name}
+                imageDark={t.imageDark}
+                imageLight={t.imageLight}
+                url={t.url}
+              />)
+            }
+          </motion.div>
+        : null
+      }
 
-            <Button
-            textES={`${showMore ? 'Mostrar menos' : 'Mostrar más'}`}
-            textUS={`${showMore ? 'Show less' : 'Show more'}`}
-            onClick={handleClick}
-            />
-        </div>
+      <Button
+      textES={`${showMore ? 'Mostrar menos' : 'Mostrar más'}`}
+      textUS={`${showMore ? 'Show less' : 'Show more'}`}
+      onClick={handleClick}
+      />
+    </div>
   )
 }
 
